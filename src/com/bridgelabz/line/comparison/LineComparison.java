@@ -36,16 +36,16 @@ public class LineComparison {
 
 
 
-        double Length_Of_Line1 =(int) Math.sqrt((x2-x1)^2+(y2-y1)^2);
-        double Length_Of_Line2 =(int)Math.sqrt((a2-a1)^2+(b2-b1)^2);
+        double Length_Of_Line1 =Math.sqrt(   Math.pow( (x2-x1),2)  +   Math.pow( (y2-y1),2)   );
+        double Length_Of_Line2 =Math.sqrt(   Math.pow((a2-a1),2)    +  Math.pow( (b2-b1),2)    );
 
 
         System.out.println(" ****** First Line co-ordinates ****** | \t ****** Second Line co-ordinates ****** ");
         System.out.println("Value of X1:-" +x1+ "\t\t Value of Y1:-"+y1+ "|\tValue of A1:-" +a1 + "\t\t Value of B1:-"+b1);
         System.out.println("Value of X2:-" +x2+ "\t\t Value of Y2:-"+y2+ "|\tValue of A2:-" +a2 + "\t\t Value of B2:-"+b2);
         System.out.println("************************************************************************");
-        System.out.println("Line 1 is:-"+Length_Of_Line1);
-        System.out.println("Line 2 is:-"+Length_Of_Line2);
+        System.out.println("Line 1 is:"+Length_Of_Line1);
+        System.out.println("Line 2 is:"+Length_Of_Line2);
 
         double s1=Length_Of_Line1;
         double s2=Length_Of_Line2;
@@ -57,13 +57,9 @@ public class LineComparison {
         {
             System.out.println("Lines are not Equal");
         }
+        
 
-        Integer Length1 = (int) Length_Of_Line1;
-        Integer Length2 = (int) Length_Of_Line2;
-
-        int Result = Length1.compareTo(Length2);
-
-        if(Result == 0 )
+        if(Length_Of_Line1 == Length_Of_Line1 )
         {
             System.out.println("Line 1 is Greater ");
         }
